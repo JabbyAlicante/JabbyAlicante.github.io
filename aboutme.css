@@ -1,0 +1,221 @@
+:root {
+    --violet: #5e4894;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+    background: #090A0E;
+
+}
+
+body {
+    height: 90vh;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    padding: 5rem 7%;
+}
+
+.aboutme {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 100vh;
+    border: 2px solid #5e4894;
+    gap: 5px;
+    padding: 20px;
+}
+
+.aboutme .aboutmecontent {
+    max-width: 100rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.aboutme h2 {
+    font-size: 2.5rem;
+    width: 14rem;
+    color: #94a5d4;
+    padding: 1rem;
+    line-height: 4.0rem;
+    font-weight: bolder;
+    background: rgb(21, 23, 38, 100%);
+    box-shadow: 0.5rem 1rem rgba(31, 31, 33, 0.356);
+    border-radius: .5rem;
+    margin: 20px auto;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    text-align: center;
+    position: relative;
+    top: -20rem;
+    left: 90rem;
+}
+
+.aboutme h2:hover {
+    background: #420742;
+    cursor: pointer;
+}
+
+.aboutme .ellipse1,
+.aboutme .ellipse2 {
+    position: absolute;
+}
+
+.aboutme .ellipse1 {
+    width: 8vw;
+    height: 8vw;
+    background-color: rgb(21, 23, 38, 100%);
+    border-radius: 50%;
+    position: relative;
+    top: -5vw;
+    left: 10vw;
+}
+
+.aboutme .ellipse2 {
+    width: 6vw;
+    height: 6vw;
+    background-color: #5f6b8b;
+    border-radius: 50%;
+    position: relative;
+    top: -11vw;
+    left: 10vw;
+}
+
+.aboutme .circles {
+    position: relative;
+    margin: 20px auto;
+}
+
+.aboutme .lappy {
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 20%;
+    box-shadow: 0.5rem 1rem rgba(125, 125, 160, 0.707);
+    background: #420742;
+    left: -75rem;
+    bottom: -20rem;
+}
+
+.aboutme .aboutmecontent p {
+    font-size: 1.5rem;
+    color: rgb(194, 206, 217);
+    padding: 1rem 1.5rem;
+    line-height: 2.0;
+    font-weight: bold;
+    background: rgba(7, 1, 27, 0.871);
+    border-radius: 5rem;
+    border: 1rem solid #5f6b8b;
+    margin: 20px auto;
+    max-width: 90%;
+    box-shadow: 1px 1px 2px black, 0 0 25px rgb(56, 24, 84), 0 0 5px darkblue;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    position: relative;
+    right: -12rem;
+    top: -8rem;
+}
+
+.aboutme .aboutmecontent p:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .aboutme h2 {
+        left: 1rem;
+        top: -2rem;
+    }
+
+    .aboutme .circles {
+        left: 1rem;
+        top: -30rem;
+    }
+
+    .aboutme .lappy {
+        left: -3rem;
+        top: -5rem;
+    }
+
+    .aboutme .aboutmecontent p {
+        left: 1rem;
+        top: -5rem;
+    }
+}
+
+@media screen and (min-width: 451px) and (max-width: 768px) {
+    html {
+        font-size: 47%;
+    }
+
+    .aboutme h2 {
+        left: 1rem;
+        top: -2rem;
+    }
+
+    .aboutme .circles {
+        left: 1rem;
+        top: -30rem;
+    }
+
+    .aboutme .lappy {
+        width: 40%;
+        left: -16rem;
+        top: -5rem;
+    }
+
+    .aboutme .aboutmecontent p {
+        left: 1rem;
+        top: -5rem;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    html {
+        font-size: 40%;
+    }
+
+}
