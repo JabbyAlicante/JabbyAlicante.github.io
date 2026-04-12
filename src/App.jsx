@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import HomePage from './pages/HomePage'
-import './styles/App.css'
 import './styles/index.css'
 import './styles/Header.css'
+import './styles/home.css'
 
 
 function App() {

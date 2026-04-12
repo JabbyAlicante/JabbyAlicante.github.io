@@ -1,0 +1,225 @@
+/* ===== HOME SECTION ===== */
+.home {
+  width: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: clamp(80px, 12vh, 140px);
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: #f1f5f9;
+  font-family: 'Inter', sans-serif;
+}
+
+.home-content * {
+  will-change: transform, opacity;
+}
+
+.home-content {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 2;
+  align-items: center;
+  margin: 0 auto; /* 👈 centers + adds side spacing */
+  padding: 0 clamp(16px, 5vw, 40px);
+  box-sizing: border-box;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.home-open-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+  padding: 6px 12px;
+  background-color: #94a3b822;
+  border-radius: 999px; /* pill shape */
+}
+
+.circle1 {
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #22c55e;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.open-title-line {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  letter-spacing: 1px;
+}
+
+/* ===== TITLE ===== */
+.title1 {
+  text-align: center;
+  z-index: 2;
+  width: 100%;
+  animation: fadeUp 0.8s ease-out 0.1s both;
+}
+
+.title1 h1 {
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-weight: 300;
+  line-height: 1.2;
+  color: #afc0d7;
+}
+
+.name {
+  display: block;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #1e4339, #00ffb3, #2AC196, #5fe3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== ROLE ===== */
+.title2 h2 {
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  font-weight: 500;
+  color: #cbd5f5;
+}
+
+.role {
+  color: #2AC196;
+  font-weight: 600;
+}
+
+.role::after {
+  content: "|";
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.title3 {
+  animation: fadeUp 0.8s ease-out 0.3s both;
+}
+
+/* ===== DESCRIPTION ===== */
+.title3 p {
+  max-width: 600px;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  line-height: 1.6;
+  color: #94a3b8;
+}
+
+/* ===== SCROLL INDICATOR ===== */
+.scroll-indicator {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.7;
+  bottom: 30px;
+  animation: fadeUp 0.8s ease-out 0.4s both;
+}
+
+.scroll-text {
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.scroll-arrow i {
+  font-size: 1.2rem;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* ===== BACKGROUND EFFECT (OPTIONAL GLOW) ===== */
+.home::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: #2AC196;
+  filter: blur(150px);
+  opacity: 0.2;
+  top: -100px;
+  left: -100px;
+}
+
+.home::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #5fe3b8;
+  filter: blur(120px);
+  opacity: 0.15;
+  bottom: -100px;
+  right: -100px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .scroll-indicator {
+    bottom: 20px;
+  }
+  .home-content {
+    gap: 16px;
+  }
+
+  .title3 p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-indicator {
+    bottom: 20px;
+  }
+  .home {
+    padding-top: 80px;
+  }
+
+  .home-open-content {
+    padding: 5px 10px;
+  }
+
+  .open-title-line {
+    font-size: 0.75rem;
+  }
+
+  .scroll-text {
+    font-size: 0.75rem;
+  }
+
+  .scroll-indicator {
+    margin-top: 24px;
+  }
+}
