@@ -1,0 +1,240 @@
+.about-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #f1f5f9;
+  font-family: 'Inter', sans-serif;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.about-content {
+  width: 100%;
+  height: 100%;
+  max-width: none; 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title-about h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2AC196;
+  letter-spacing: 1px;
+}
+
+.about-desc-content {
+  display: flex;
+  gap: clamp(20px, 4vw, 60px);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: auto;
+}
+
+.image-container-about {
+  position: relative;
+  width: clamp(220px, 30vw, 350px);
+  height: clamp(300px, 40vw, 500px);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(29, 198, 150, 0.4);
+}
+
+.image-container-about img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+}
+
+.image-container-about:hover img {
+  transform: scale(1.05);
+}
+
+.about-icons {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  gap: 40px;
+}
+
+.about-icons div {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(12, 239, 205, 0.152);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+.about-icons div:hover {
+  transform: translateY(-3px);
+  background: rgba(42, 193, 150, 0.2);
+  box-shadow: 0 0 15px rgba(42, 193, 150, 0.4);
+}
+
+.about-right {
+  flex: 2;
+  display: flex;
+  align-items: center;
+
+}
+
+.about-right-content {
+  width: 100%;
+  max-width: 900px;
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+
+}
+
+.about-circles {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.circle1about,
+.circle2about,
+.circle3about {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.circle1about {
+  background: #ff5f56;
+}
+.circle2about {
+  background: #ffbd2e;
+}
+.circle3about {
+  background: #27c93f;
+}
+
+.about-right-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #94a3b8;
+}
+
+@media (max-width: 900px) {
+  .about-desc-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .about-right-content {
+    max-width: 600px;
+    padding: 22px;
+  }
+
+  .image-container-about img {
+    transform: scale(1.6); 
+  }
+
+  .image-container-about {
+    width: 220px;
+    height: 280px;
+  }
+
+  .about-icons {
+    justify-content: center;
+    bottom: 20px;
+  }
+
+  .about-icons div {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 0 20px;
+  }
+
+  .about-content {
+    gap: 15px;
+  }
+
+  .title-about h2 {
+    font-size: 1.2rem;
+  }
+
+  .about-desc-content {
+    gap: 25px;
+  }
+
+  .image-container-about {
+    width: 180px;
+    height: 240px;
+  }
+
+  .image-container-about img {
+    transform: scale(1.15);
+    object-position: center top;
+  }
+
+  @media (hover: hover) {
+    .image-container-about:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  .about-icons {
+    gap: 15px;
+    bottom: 15px;
+  }
+
+  .about-icons div {
+    width: 35px;
+    height: 35px;
+  }
+
+  .about-right-content {
+    padding: 18px 16px; 
+  }
+
+  .about-right-content p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}

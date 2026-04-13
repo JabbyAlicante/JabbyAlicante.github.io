@@ -1,3 +1,4 @@
+import about from "./about.jsx";
 export default function home(element) {
   element.innerHTML = `
     <section class="home">
@@ -24,9 +25,9 @@ export default function home(element) {
           </div>
         </div>
       </div>
-      <div class="about-me-content"></div>
-      <div class="journey-content"></div>
     </section>
+    <section class="about-section"></section>
+    <section class="journey-content"></section>
   `;
   const roles = [
     "Software Developer",
@@ -59,11 +60,37 @@ export default function home(element) {
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       roleIndex = (roleIndex + 1) % roles.length;
-      speed = 800; 
+      speed = 800;
     }
 
     setTimeout(type, speed);
   }
 
   type();
+  const aboutContainer = document.querySelector(".about-section");
+  about(aboutContainer);
+  
+  const scrollBtn = document.querySelector(".scroll-indicator");
+  const aboutSection = document.querySelector(".about-section");
+
+  scrollBtn.addEventListener("click", () => {
+    aboutSection.scrollIntoView({ 
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+
+  const homeSection = document.querySelector(".home");
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const triggerPoint = window.innerHeight / 2;
+
+    if (scrollY > triggerPoint) {
+      homeSection.classList.add("hide");
+      aboutSection.classList.add("show");
+    } else {
+      homeSection.classList.remove("hide");
+      aboutSection.classList.remove("show");
+    }
+  });
 }
