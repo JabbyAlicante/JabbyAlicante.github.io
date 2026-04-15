@@ -1,4 +1,5 @@
 import about from "./about.jsx";
+import journey from "./journey.jsx";
 export default function home(element) {
   element.innerHTML = `
     <section class="home">
@@ -27,7 +28,7 @@ export default function home(element) {
       </div>
     </section>
     <section class="about-section"></section>
-    <section class="journey-content"></section>
+    <section class="journey-section"></section>
   `;
   const roles = [
     "Software Developer",
@@ -72,6 +73,7 @@ export default function home(element) {
   
   const scrollBtn = document.querySelector(".scroll-indicator");
   const aboutSection = document.querySelector(".about-section");
+  const journeySection = document.querySelector(".journey-section");
 
   scrollBtn.addEventListener("click", () => {
     aboutSection.scrollIntoView({ 
@@ -92,5 +94,9 @@ export default function home(element) {
       homeSection.classList.remove("hide");
       aboutSection.classList.remove("show");
     }
+      
   });
+
+  const journeyContainer = document.querySelector(".journey-section");
+  journey(journeyContainer);
 }

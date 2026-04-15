@@ -4,6 +4,8 @@ import './styles/index.css'
 import './styles/Header.css'
 import './styles//home.css'
 import './styles/about.css'
+import './styles/journey.css'
+
 
 
 
