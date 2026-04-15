@@ -42,6 +42,41 @@ Error generating stack: `+e.message+`
             </div>
         </div>
     `}function p(e){e.innerHTML=`
+    <div class="journey-content">
+
+      <div class="title-journey">
+        <h2>// My Journey</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p>College of Mary Immaculate</p>
+            <span>2022 - 2026</span>
+            <p class="description">Graduated with a degree in Computer Science, where I developed strong technical skills and gained in-depth knowledge relevant to my career. During my studies, I worked on various projects focused on software and web development, applying both theoretical and practical concepts.</p>
+            <span class="important">Relevant Coursework:</span>
+            <p class="description">Data Structures, Object-Oriented Programming, Programming, Algorithms, Information Security, Natural Language Processing, Intelligent Systems</p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h3>Software Developer Intern</h3>
+            <p>JCAS Logistics</p>
+            <span>April 2025 - May 2025</span>
+            <p class="description">Contributed to the development of an HR module and Driver’s Companion App, focusing on UI/UX design, frontend development, and backend logic to improve user experience and navigation. Designed wireframes and interfaces using Balsamiq and FlutterFlow, enhancing usability and reducing complexity. Integrated frontend with Supabase backend.</p>
+            <span class="important">Tech Stack:</span>
+            <p class="description">FlutterFlow, Balsamiq, Supabase</p>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+      </div>
+    </div>
+  `;let t=document.querySelectorAll(`.timeline-item`),n=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&e.target.classList.add(`show`)})},{threshold:.2});t.forEach(e=>n.observe(e))}function m(e){e.innerHTML=`
     <section class="home">
       <div class="home-content">
         <div class="home-open-content">
@@ -68,8 +103,8 @@ Error generating stack: `+e.message+`
       </div>
     </section>
     <section class="about-section"></section>
-    <section class="journey-content"></section>
-  `;let t=[`Software Developer`,`Web Developer`,`Application Developer`],n=document.querySelector(`.role`),r=0,i=0,a=!1;function o(){let e=t[r];a?i--:i++,n.textContent=e.substring(0,i);let s=a?50:100;!a&&i===e.length?(s=3e3,a=!0):a&&i===0&&(a=!1,r=(r+1)%t.length,s=800),setTimeout(o,s)}o(),f(document.querySelector(`.about-section`));let s=document.querySelector(`.scroll-indicator`),c=document.querySelector(`.about-section`);s.addEventListener(`click`,()=>{c.scrollIntoView({behavior:`smooth`,block:`start`})});let l=document.querySelector(`.home`);window.addEventListener(`scroll`,()=>{window.scrollY>window.innerHeight/2?(l.classList.add(`hide`),c.classList.add(`show`)):(l.classList.remove(`hide`),c.classList.remove(`show`))})}function m(e){e.innerHTML=`
+    <section class="journey-section"></section>
+  `;let t=[`Software Developer`,`Web Developer`,`Application Developer`],n=document.querySelector(`.role`),r=0,i=0,a=!1;function o(){let e=t[r];a?i--:i++,n.textContent=e.substring(0,i);let s=a?50:100;!a&&i===e.length?(s=3e3,a=!0):a&&i===0&&(a=!1,r=(r+1)%t.length,s=800),setTimeout(o,s)}o(),f(document.querySelector(`.about-section`));let s=document.querySelector(`.scroll-indicator`),c=document.querySelector(`.about-section`);document.querySelector(`.journey-section`),s.addEventListener(`click`,()=>{c.scrollIntoView({behavior:`smooth`,block:`start`})});let l=document.querySelector(`.home`);window.addEventListener(`scroll`,()=>{window.scrollY>window.innerHeight/2?(l.classList.add(`hide`),c.classList.add(`show`)):(l.classList.remove(`hide`),c.classList.remove(`show`))}),p(document.querySelector(`.journey-section`))}function h(e){e.innerHTML=`
     <div class="particles-background" id="particlesBackground"></div>
     <header class="header">
       <div class="header-container">
@@ -123,7 +158,7 @@ Error generating stack: `+e.message+`
         </iframe>
       </div>
     </div>
-  `;let t=e.querySelector(`.menu-toggle`),n=e.querySelector(`.nav`);t&&t.addEventListener(`click`,()=>{n.classList.toggle(`active`),t.querySelector(`.hamburger`).classList.toggle(`active`)});let r=e.querySelector(`.resume-btn`),i=e.querySelector(`#resumeModal`),a=e.querySelector(`.resume-close-btn`);r&&i&&r.addEventListener(`click`,()=>{i.classList.add(`active`)}),a&&i&&a.addEventListener(`click`,()=>{i.classList.remove(`active`)}),i&&i.addEventListener(`click`,e=>{e.target===i&&i.classList.remove(`active`)});let o=e.querySelector(`.toggle-theme`),s=o.querySelector(`i`),c=localStorage.getItem(`theme`)||`light`;document.documentElement.setAttribute(`data-theme`,c),l(c,s),o&&o.addEventListener(`click`,()=>{let e=document.documentElement.getAttribute(`data-theme`)===`light`?`dark`:`light`;document.documentElement.setAttribute(`data-theme`,e),localStorage.setItem(`theme`,e),l(e,s)});function l(e,t){e===`dark`?t.className=`fa-regular fa-sun`:t.className=`fa-solid fa-moon`}let u=e.querySelector(`.resume-btn-mobile`);u&&u.addEventListener(`click`,()=>{i.classList.add(`active`),n.classList.remove(`active`),t.querySelector(`.hamburger`).classList.remove(`active`)});let d=e.querySelector(`.toggle-theme-mobile`);if(d){let e=d.querySelector(`i`);l(c,e),d.addEventListener(`click`,()=>{let t=document.documentElement.getAttribute(`data-theme`)===`light`?`dark`:`light`;document.documentElement.setAttribute(`data-theme`,t),localStorage.setItem(`theme`,t),l(t,e),l(t,s)})}function f(){let t=e.querySelector(`#particlesBackground`);if(t)for(let e=0;e<50;e++){let e=document.createElement(`div`);e.className=`particle`,e.textContent=Math.random()>.5?`1`:`0`,e.style.left=Math.random()*100+`%`,e.style.animationDelay=Math.random()*20+`s`,e.style.animationDuration=Math.random()*10+15+`s`,t.appendChild(e)}}function p(){let e=document.createElement(`div`);e.id=`bodyParticlesBackground`,e.className=`body-particles-background`,document.body.insertBefore(e,document.body.firstChild);for(let t=0;t<100;t++){let t=document.createElement(`div`);t.className=`particle`,t.textContent=Math.random()>.5?`1`:`0`,t.style.left=Math.random()*100+`%`,t.style.top=Math.random()*100+`%`,t.style.animationDelay=Math.random()*30+`s`,t.style.animationDuration=Math.random()*15+20+`s`,e.appendChild(t)}}f(),p()}function h(e){return e.innerHTML=`
+  `;let t=e.querySelector(`.menu-toggle`),n=e.querySelector(`.nav`);t&&t.addEventListener(`click`,()=>{n.classList.toggle(`active`),t.querySelector(`.hamburger`).classList.toggle(`active`)});let r=e.querySelector(`.resume-btn`),i=e.querySelector(`#resumeModal`),a=e.querySelector(`.resume-close-btn`);r&&i&&r.addEventListener(`click`,()=>{i.classList.add(`active`)}),a&&i&&a.addEventListener(`click`,()=>{i.classList.remove(`active`)}),i&&i.addEventListener(`click`,e=>{e.target===i&&i.classList.remove(`active`)});let o=e.querySelector(`.toggle-theme`),s=o.querySelector(`i`),c=localStorage.getItem(`theme`)||`light`;document.documentElement.setAttribute(`data-theme`,c),l(c,s),o&&o.addEventListener(`click`,()=>{let e=document.documentElement.getAttribute(`data-theme`)===`light`?`dark`:`light`;document.documentElement.setAttribute(`data-theme`,e),localStorage.setItem(`theme`,e),l(e,s)});function l(e,t){e===`dark`?t.className=`fa-regular fa-sun`:t.className=`fa-solid fa-moon`}let u=e.querySelector(`.resume-btn-mobile`);u&&u.addEventListener(`click`,()=>{i.classList.add(`active`),n.classList.remove(`active`),t.querySelector(`.hamburger`).classList.remove(`active`)});let d=e.querySelector(`.toggle-theme-mobile`);if(d){let e=d.querySelector(`i`);l(c,e),d.addEventListener(`click`,()=>{let t=document.documentElement.getAttribute(`data-theme`)===`light`?`dark`:`light`;document.documentElement.setAttribute(`data-theme`,t),localStorage.setItem(`theme`,t),l(t,e),l(t,s)})}function f(){let t=e.querySelector(`#particlesBackground`);if(t)for(let e=0;e<50;e++){let e=document.createElement(`div`);e.className=`particle`,e.textContent=Math.random()>.5?`1`:`0`,e.style.left=Math.random()*100+`%`,e.style.animationDelay=Math.random()*20+`s`,e.style.animationDuration=Math.random()*10+15+`s`,t.appendChild(e)}}function p(){let e=document.createElement(`div`);e.id=`bodyParticlesBackground`,e.className=`body-particles-background`,document.body.insertBefore(e,document.body.firstChild);for(let t=0;t<100;t++){let t=document.createElement(`div`);t.className=`particle`,t.textContent=Math.random()>.5?`1`:`0`,t.style.left=Math.random()*100+`%`,t.style.top=Math.random()*100+`%`,t.style.animationDelay=Math.random()*30+`s`,t.style.animationDuration=Math.random()*15+20+`s`,e.appendChild(t)}}f(),p()}function g(e){return e.innerHTML=`
     <nav id="navigation"></nav>
     <main id="main"></main>
-  `,{navigation:document.getElementById(`navigation`),main:document.getElementById(`main`)}}function g(e){let{navigation:t,main:n}=h(e);m(t),p(n)}var _=e((e=>{var t=Symbol.for(`react.transitional.element`);function n(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.jsx=n})),v=e(((e,t)=>{t.exports=_()}))();function y(){return(0,l.useEffect)(()=>{let e=document.getElementById(`root`);e&&g(e)},[]),(0,v.jsx)(`div`,{id:`app-container`})}(0,u.createRoot)(document.getElementById(`root`)).render((0,v.jsx)(l.StrictMode,{children:(0,v.jsx)(y,{})}));
+  `,{navigation:document.getElementById(`navigation`),main:document.getElementById(`main`)}}function _(e){let{navigation:t,main:n}=g(e);h(t),m(n)}var v=e((e=>{var t=Symbol.for(`react.transitional.element`);function n(e,n,r){var i=null;if(r!==void 0&&(i=``+r),n.key!==void 0&&(i=``+n.key),`key`in n)for(var a in r={},n)a!==`key`&&(r[a]=n[a]);else r=n;return n=r.ref,{$$typeof:t,type:e,key:i,ref:n===void 0?null:n,props:r}}e.jsx=n})),y=e(((e,t)=>{t.exports=v()}))();function b(){return(0,l.useEffect)(()=>{let e=document.getElementById(`root`);e&&_(e)},[]),(0,y.jsx)(`div`,{id:`app-container`})}(0,u.createRoot)(document.getElementById(`root`)).render((0,y.jsx)(l.StrictMode,{children:(0,y.jsx)(b,{})}));
