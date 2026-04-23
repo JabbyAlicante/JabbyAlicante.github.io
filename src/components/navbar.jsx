@@ -55,7 +55,6 @@ export default function navbar(element) {
     </div>
   `;
 
-  // Hamburger menu toggle
   const menuToggle = element.querySelector('.menu-toggle');
   const nav = element.querySelector('.nav');
   
@@ -66,7 +65,6 @@ export default function navbar(element) {
     });
   }
 
-  // Resume modal functionality
   const resumeBtn = element.querySelector('.resume-btn');
   const resumeModal = element.querySelector('#resumeModal');
   const closeBtn = element.querySelector('.resume-close-btn');
@@ -83,7 +81,6 @@ export default function navbar(element) {
     });
   }
 
-  // Close modal when clicking outside
   if (resumeModal) {
     resumeModal.addEventListener('click', (e) => {
       if (e.target === resumeModal) {
@@ -92,11 +89,9 @@ export default function navbar(element) {
     });
   }
 
-  // Theme toggle functionality
   const themeToggle = element.querySelector('.toggle-theme');
   const themeIcon = themeToggle.querySelector('i');
   
-  // Check for saved theme or system preference
   const currentTheme = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', currentTheme);
   updateThemeIcon(currentTheme, themeIcon);
@@ -120,7 +115,6 @@ export default function navbar(element) {
     }
   }
 
-  // Mobile resume button
   const resumeBtnMobile = element.querySelector('.resume-btn-mobile');
   if (resumeBtnMobile) {
     resumeBtnMobile.addEventListener('click', () => {
@@ -130,7 +124,6 @@ export default function navbar(element) {
     });
   }
 
-  // Mobile theme toggle
   const themeToggleMobile = element.querySelector('.toggle-theme-mobile');
   if (themeToggleMobile) {
     const themeIconMobile = themeToggleMobile.querySelector('i');
@@ -147,7 +140,6 @@ export default function navbar(element) {
     });
   }
 
-  // Create animated particles
   function createParticles() {
     const particlesContainer = element.querySelector('#particlesBackground');
     if (!particlesContainer) return;
@@ -165,7 +157,6 @@ export default function navbar(element) {
     }
   }
 
-  // Create body particles background
   function createBodyParticles() {
     const bodyParticlesContainer = document.createElement('div');
     bodyParticlesContainer.id = 'bodyParticlesBackground';

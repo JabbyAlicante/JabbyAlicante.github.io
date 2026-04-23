@@ -5,6 +5,7 @@ import './styles/Header.css'
 import './styles//home.css'
 import './styles/about.css'
 import './styles/journey.css'
+import './styles/skills.css'
 
 
 

@@ -61,6 +61,7 @@ html {
   min-height: 100vh;
   width: 100%;
   font-family: 'Fredoka', 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 
 }
 

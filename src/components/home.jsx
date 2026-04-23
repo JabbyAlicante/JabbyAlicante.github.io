@@ -1,8 +1,9 @@
 import about from "./about.jsx";
 import journey from "./journey.jsx";
+import skills from "./skills.jsx";
 export default function home(element) {
   element.innerHTML = `
-    <section class="home">
+    <section id="home" class="home">
       <div class="home-content">
         <div class="home-open-content">
           <div class="circle1"></div>
@@ -29,6 +30,7 @@ export default function home(element) {
     </section>
     <section class="about-section"></section>
     <section class="journey-section"></section>
+    <section id="skills" class="skills-section"></section>
   `;
   const roles = [
     "Software Developer",
@@ -99,4 +101,6 @@ export default function home(element) {
 
   const journeyContainer = document.querySelector(".journey-section");
   journey(journeyContainer);
+  const skillsContainer = document.querySelector(".skills-section");
+  skills(skillsContainer);
 }

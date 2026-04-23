@@ -169,7 +169,7 @@
   }
 
   .timeline-dot {
-    left: 10px;
+    left: 3px;
     transform: translateY(-50%);
   }
 }
