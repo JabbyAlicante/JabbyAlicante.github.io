@@ -1,13 +1,19 @@
 <h1 align="center">Personal Portfolio Website</h1>
-[JAlicante](https://jalicante.vercel.app)
+
+<p align="center">
+  <a href="https://jalicante.vercel.app">JAlicante</a>
+</p>
 
 ---
 
 ## Preview
-<img width="1366" height="768" alt="portfoliowebsite" src="https://github.com/user-attachments/assets/9f328825-b726-4563-9cbe-1a1e436e8dd2" />
 
+<p align="center">
+  <img width="1366" height="768" alt="portfolio" src="https://github.com/user-attachments/assets/d6590cfc-edd3-45d0-851f-af54417414be" />
+</p>
 
 ---
+
 
 ## Tech Stack
 
