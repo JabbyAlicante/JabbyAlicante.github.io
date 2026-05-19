@@ -75,7 +75,7 @@ export default function home(element) {
   
   const scrollBtn = document.querySelector(".scroll-indicator");
   const aboutSection = document.querySelector(".about-section");
-  const journeySection = document.querySelector(".journey-section");
+  // const journeySection = document.querySelector(".journey-section");
 
   scrollBtn.addEventListener("click", () => {
     aboutSection.scrollIntoView({ 
@@ -84,19 +84,36 @@ export default function home(element) {
     });
   });
 
-  const homeSection = document.querySelector(".home");
   window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
     const triggerPoint = window.innerHeight / 2;
 
     if (scrollY > triggerPoint) {
-      homeSection.classList.add("hide");
       aboutSection.classList.add("show");
     } else {
-      homeSection.classList.remove("hide");
       aboutSection.classList.remove("show");
     }
-      
+  });
+
+  if (window.location.hash === "#skills") {
+    const el = document.getElementById("skills");
+    if (el) {
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: "smooth" });
+      }, 50);
+    }
+  }
+
+  const homeContent = document.querySelector(".home-content");
+
+  window.addEventListener("scroll", () => {
+    const triggerPoint = window.innerHeight / 2;
+
+    if (window.scrollY > triggerPoint) {
+      homeContent.classList.add("fade-out");
+    } else {
+      homeContent.classList.remove("fade-out");
+    }
   });
 
   const journeyContainer = document.querySelector(".journey-section");

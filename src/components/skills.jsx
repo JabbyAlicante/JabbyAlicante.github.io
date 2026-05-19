@@ -58,7 +58,7 @@ export default function skills(element) {
     <div class="skills-content">
 
       <div class="title-skills">
-        <h2>// Skills</h2>
+        <h2>// skills</h2>
       </div>
 
       <div class="ticker-wrapper">

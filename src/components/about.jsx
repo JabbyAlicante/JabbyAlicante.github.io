@@ -3,7 +3,7 @@ export default function about(element) {
   element.innerHTML = `
         <div class="about-content">
             <div class="title-about">
-                <h2>// About Me</h2>
+                <h2>// about me</h2>
             </div>
             <div class="about-desc-content">
                 <div class="about-left">

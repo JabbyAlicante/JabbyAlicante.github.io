@@ -3,7 +3,7 @@ export default function journey(element) {
     <div class="journey-content">
 
       <div class="title-journey">
-        <h2>// My Journey</h2>
+        <h2>// my journey</h2>
       </div>
 
       <div class="timeline">
