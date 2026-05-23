@@ -56,13 +56,18 @@
   box-sizing: border-box;
 }
 
-body,
-html {
-  min-height: 100vh;
+html,
+body {
+  margin: 0;
+  padding: 0;
+
   width: 100%;
+  min-height: 100vh;
+
+  overflow-x: clip;
+
   font-family: 'Fredoka', 'Poppins', sans-serif;
   scroll-behavior: smooth;
-
 }
 
 
